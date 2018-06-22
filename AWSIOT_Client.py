@@ -46,7 +46,7 @@ def customShadowCallback_Update(payload, responseStatus, token):
         print("property: " + str(payloadDict["state"]["desired"]["live"]))
         print("~~~~~~~~~~~~~~~~~~~~~~~\n\n")
     if responseStatus == "rejected":
-    print("Update request " + token + " rejected!")
+    	print("Update request " + token + " rejected!")
 
 def customShadowCallback_Delete(payload, responseStatus, token):
     if responseStatus == "timeout":
