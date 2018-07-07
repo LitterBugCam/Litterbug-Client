@@ -110,7 +110,7 @@ s3 = boto3.client('s3', aws_access_key_id="xxxxxxxxxxx",
 aws_secret_access_key="yyyyyyyyyyyyyyyyyyyyyyy")
 
 
-s3.download_file('littercam','device-202481590827990/parameters.txt', '/home/pi/littering/parameters.txt')
+s3.download_file('littercam','device-'+str(mac)+'/parameters.txt', '/home/pi/littering/parameters.txt')
 
 subprocess.Popen(["/home/pi/littering/Litter_detect"])
 myMQTTClient.publish("topic", "connected", 0)
